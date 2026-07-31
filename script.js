@@ -106,4 +106,52 @@ for (let i = 0; i < 80; i++) {
 }
 ```
 
-}
+}document.addEventListener("DOMContentLoaded", function(){
+
+```
+const surpriseButton =
+    document.querySelector("button");
+
+const popup =
+    document.getElementById("popup");
+
+const closeButton =
+    document.querySelector(".close");
+
+
+surpriseButton.addEventListener(
+    "click",
+    function(){
+
+        popup.style.display = "flex";
+
+    }
+);
+
+
+closeButton.addEventListener(
+    "click",
+    function(){
+
+        popup.style.display = "none";
+
+    }
+);
+
+
+popup.addEventListener(
+    "click",
+    function(event){
+
+        if(event.target === popup){
+
+            popup.style.display = "none";
+
+        }
+
+    }
+);
+```
+
+});
+
